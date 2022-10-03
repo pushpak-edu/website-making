@@ -1,0 +1,118 @@
+body {
+    margin: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.hero-img {
+    background: url('../assets/images/four.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position-x: 20%;
+    background-position-y: 20%;
+}
+
+.logo{
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;   
+}
+
+svg {
+    width: 3em;
+    cursor: pointer;
+    margin-top: -.6em;
+}
+
+nav {
+    display: none;
+}
+
+section.hero {
+
+    color: white;
+    height: 90vh;
+
+    svg {
+
+        position: absolute;
+        bottom: 2em;
+        width: 1em;
+        
+        path {
+            fill: white;
+        }
+    }
+
+}
+
+.hero.h1 {
+    font-size: 3rem;
+    margin-top: 2em;
+    line-height: 3.3rem;
+}
+
+
+
+nav {
+   
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: white;
+    z-index: 999;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: trasnform .5s ease-in-out;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 8em;
+        display: block;
+
+        a {
+            color: black;
+            padding: .5em 1.5em;
+            font-size: .9rem;
+
+            &:hover {
+                background: gray;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .close {
+        float: right;
+        margin: 2.5em;
+        width: 2.5em;
+    }
+}
+
+.info {
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 11em;
+    }
+
+    .title {
+        font-weight: bold;
+
+    }
+}

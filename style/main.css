@@ -446,7 +446,7 @@ section.hero .down-arrow path {
   margin: 0;
   position: relative;
   z-index: 1;
-  font-size: 2.6em;
+  font-size: 1.25rem;
 }
 .demo .item .details p {
   font-size: 1em;
@@ -472,7 +472,7 @@ section.hero .down-arrow path {
   padding-right: 10%;
 }
 .demo .summary .total {
-  font-size: 2em;
+  font-size: 1.25em;
   text-align: center;
   line-height: 65px;
 }
@@ -483,7 +483,6 @@ section.hero .down-arrow path {
 }
 .demo .quantity-text {
   margin: 0 20px;
-  font-size: 1.2em;
 }
 .demo .sub-total,
 .demo .taxes {
@@ -510,11 +509,16 @@ section.hero .down-arrow path {
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1882352941);
   background-color: #fff;
-  padding: 0px 30px 30px 30px;
+  padding: 15px 30px 30px 30px;
   margin-bottom: 20px;
 }
+.demo .delivery-address p,
+.demo .payment-details p {
+  font-size: 0.8rem;
+  padding-top: 15px;
+}
 .demo h3 {
-  font-size: 2em;
+  font-size: 1.25rem;
 }
 .demo .coupon {
   display: flex;
@@ -525,13 +529,19 @@ section.hero .down-arrow path {
   align-items: center;
   margin-bottom: 20px;
 }
+.demo .coupon .apply-coupon {
+  width: 49%;
+}
 .demo .coupon h3 {
   margin-right: 30px;
-  font-size: 2em;
+  font-size: 1.25rem;
 }
 .demo input {
   border-radius: 10px;
   height: 40px;
+}
+.demo .coupon-input {
+  float: right;
 }
 .demo .header {
   display: flex;
@@ -635,7 +645,7 @@ section.hero .down-arrow path {
   }
   .demo .sub-total,
 .demo .taxes {
-    font-size: 1em;
+    font-size: 0.6em;
   }
   .demo .summary .total {
     font-size: 1.6em;
@@ -653,7 +663,7 @@ section.hero .down-arrow path {
     margin: 0;
   }
   .demo .btn-checkout {
-    font-size: 1.6em;
+    font-size: 1em;
   }
   .demo .logo {
     width: 50%;
@@ -679,6 +689,8 @@ section.hero .down-arrow path {
 }
 .new .ref {
   width: 15em;
+  height: 10em;
+  background-size: cover;
 }
 .new .check {
   width: 100%;
@@ -710,7 +722,7 @@ ul {
 }
 
 .footer {
-  background-color: #24262b;
+  background-color: #848484;
   padding: 70px 0;
 }
 
@@ -721,7 +733,7 @@ ul {
 
 .footer-col h4 {
   font-size: 18px;
-  color: #ffffff;
+  color: #006491;
   text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
@@ -733,7 +745,7 @@ ul {
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: #e91e63;
+  background-color: #006491;
   height: 2px;
   box-sizing: border-box;
   width: 50px;
@@ -788,4 +800,290 @@ ul {
   .footer-col {
     width: 100%;
   }
+}
+.common-three-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.coupon-demo {
+  /* Helpers */
+  /* Removes the announcement on Print */
+}
+.coupon-demo body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.coupon-demo .is-hidden {
+  display: none !important;
+}
+.coupon-demo .is-desktop {
+  display: block;
+}
+@media (max-width: 768px) {
+  .coupon-demo .is-desktop {
+    display: none !important;
+  }
+}
+.coupon-demo .is-mobile {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .coupon-demo .is-mobile {
+    display: block !important;
+  }
+}
+.coupon-demo .announcement {
+  --base-font: inherit;
+  --small-font: 0.75rem;
+  --normal-font: 1rem;
+  --medium-font: 1.25rem;
+  --primary-color: #FA003F;
+  --secondary-color: #fff;
+  --base-padding: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  font-family: var(--base-font-dev), sans-serif;
+  padding: var(--base-padding);
+}
+@media (max-width: 768px) {
+  .coupon-demo .announcement {
+    flex-direction: column-reverse;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 4;
+  }
+}
+@media print {
+  .coupon-demo .announcement {
+    display: none;
+  }
+}
+.coupon-demo .announcement .text {
+  padding: 0 1rem;
+  color: var(--secondary-color);
+}
+@media (max-width: 768px) {
+  .coupon-demo .announcement .text {
+    padding-bottom: var(--base-padding);
+  }
+}
+.coupon-demo .announcement input,
+.coupon-demo .announcement button {
+  font-family: var(--base-font);
+  font-size: var(--small-font);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: var(--base-padding);
+  border: 2px dashed var(--secondary-color);
+  /* height: 36px; */
+}
+.coupon-demo .announcement input {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  border-right: 0;
+  font-size: 16px;
+}
+.coupon-demo .announcement button {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 1rem;
+}
+.coupon-demo .announcement #timer {
+  /* font-weight: bold; */
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  padding: var(--base-padding);
+  margin-left: 1rem;
+  width: 150px;
+  text-align: center;
+  border: 1px dashed var(--secondary-color);
+  margin-right: 2.5rem;
+  line-height: 1.3;
+}
+.coupon-demo .announcement .coupon {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .coupon-demo .announcement .coupon {
+    margin: 1rem auto;
+  }
+}
+@media (min-width: 769px) {
+  .coupon-demo .announcement .close {
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    left: inherit;
+    right: 0.5rem;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+  }
+}
+.coupon-demo .announcement .tooltip {
+  position: relative;
+  display: inline-block;
+  color: var(--secondary-color);
+  opacity: 1;
+  line-height: inherit;
+  font-size: inherit;
+  z-index: inherit;
+}
+.coupon-demo .announcement .tooltip .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  background-color: #555;
+  color: #fff;
+  width: 170px;
+  font-size: smaller;
+  /* font-weight: bold; */
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+.coupon-demo .announcement .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  bottom: -100%;
+}
+.coupon-demo .announcement .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  top: -35%;
+  transform: rotate(180deg);
+}
+@media (max-width: 768px) {
+  .coupon-demo .announcement .tooltip:hover .tooltiptext {
+    bottom: 150%;
+  }
+  .coupon-demo .announcement .tooltip .tooltiptext::after {
+    top: 100%;
+    transform: rotate(0deg);
+  }
+}
+
+.test {
+  margin: 15px;
+  /* Don't need button navigation */
+}
+.test .slider {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.test .slides {
+  display: flex;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.test .slides div {
+  cursor: pointer;
+}
+.test .slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.test .slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.test .slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.test .author-info {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+.test .author-info a {
+  color: white;
+}
+.test img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.test .slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+.test .slider > a:active {
+  top: 1px;
+}
+.test .slider > a:focus {
+  background: #000;
+}
+@supports (scroll-snap-type) {
+  .test .slider > a {
+    display: none;
+  }
+}
+.test html,
+.test body {
+  height: 100%;
+  overflow: hidden;
+}
+.test body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #74ABE2, #5563DE);
+  font-family: "Ropa Sans", sans-serif;
 }/*# sourceMappingURL=main.css.map */

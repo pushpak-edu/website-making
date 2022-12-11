@@ -8,14 +8,14 @@ body {
 
 a {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.3em;
 }
 
 .back-image {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("../assets/images/four.jpg");
+  background: url("../assets/images/background-pizza-img.jpg");
   background-size: cover;
   background-position-x: 20%;
   background-position-y: 20%;
@@ -27,7 +27,6 @@ a {
 }
 
 .logo {
-  color: 6491;
   font-weight: bold;
 }
 
@@ -65,11 +64,6 @@ nav .close {
 header {
   display: flex;
   justify-content: space-between;
-}
-header svg {
-  width: 2.3em;
-  margin-top: -0.6em;
-  cursor: pointer;
 }
 
 h1 {
@@ -194,6 +188,42 @@ section.hero .down-arrow path {
     text-align: right;
     width: 25em;
   }
+  .feature .button {
+    border-radius: 4px;
+    background-color: #006491;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px;
+    width: 250px;
+    height: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+  .feature .button a {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 0.9em;
+  }
+  .feature .button#add-to-cart-btn a:after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .feature .button#add-to-cart-btn:hover a {
+    padding-right: 25px;
+  }
+  .feature .button#add-to-cart-btn:hover a:after {
+    opacity: 1;
+    right: 0;
+  }
   .feature.left {
     grid-template-areas: "left right";
   }
@@ -202,8 +232,22 @@ section.hero .down-arrow path {
   }
   .feature.left .content {
     text-align: left;
-    width: 25em;
     justify-self: left;
+  }
+  .feature.left .button a:before {
+    content: "«";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+  }
+  .feature.left .button:hover a {
+    padding-left: 25px;
+  }
+  .feature.left .button:hover a:before {
+    opacity: 1;
+    left: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -271,25 +315,18 @@ section.hero .down-arrow path {
 }
 .display-section .display-button {
   display: grid;
-  grid-template-columns: repeat(1, auto);
-  margin-bottom: 8em;
+  margin-bottom: 4em;
 }
 .display-section .display-button a {
-  text-decoration: none;
   padding: 12px 40px;
-  border-radius: 3 ̰0px;
+  border-radius: 30px;
   background: #006491;
-  display: inline-block;
   color: #fff;
   font-weight: 700;
   margin-top: 35px;
   transition: all 0.5s ease-in-out;
-  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
-  justify-content: center;
-  align-items: center;
 }
 .display-section .display-button a:hover {
-  background-color: #0f76a6;
   transform: scale(1.1);
 }
 .display-section .display-button .display-text {
@@ -1084,6 +1121,5 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, #74ABE2, #5563DE);
   font-family: "Ropa Sans", sans-serif;
 }/*# sourceMappingURL=main.css.map */

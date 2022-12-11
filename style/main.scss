@@ -1,19 +1,38 @@
+// importing fonts
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+// base variable
+// 1em = 16px
+$base-color: #006491;
+$base-font-family: 'Poppins', sans-serif;
+$base-margin: 1.5em;
+$base-white-color: #fff;
+
+
+// Standard Font Size
+$standard-font-size: 1.3em;
+
+
+//button card size
+$button-cart-font-size: 0.9em;
+
 body {
-    margin: 1.5em;
-    font-family: 'Poppins', sans-serif;
-    color: #006491;
+    margin: $base-margin;
+    font-family: $base-font-family;
+    color: $base-color;
 }
 
+// Don't want underline
 a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: $standard-font-size;
 }
 
 .back-image {
     position: absolute;
     top: 0;
     left: 0;
-    background: url('../assets/images/four.jpg');
+    background: url('../assets/images/background-pizza-img.jpg');
     background-size: cover;
     background-position-x: 20%;
     background-position-y: 20%;
@@ -24,7 +43,6 @@ a {
 }
 
 .logo {
-    color: 006491;
     font-weight: bold;
 }
 
@@ -67,11 +85,11 @@ header {
     display: flex;
     justify-content: space-between;
 
-    svg {
-        width: 2.3em;
-        margin-top: -.6em;
-        cursor: pointer;
-    }
+    // svg {
+    //     width: 2.3em;
+    //     margin-top: -.6em;
+    //     cursor: pointer;
+    // }
 }
 
 h1 {
@@ -207,6 +225,7 @@ section.hero {
     }
 
     .feature {
+
         display: grid;
         grid-template-columns: repeat(2, auto);
         gap: 3em;
@@ -220,9 +239,52 @@ section.hero {
             text-align: right;
             width: 25em;
         }
+
+        .button {
+            border-radius: 4px;
+            background-color: #006491;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 5px;
+            width: 250px;
+            height: 30px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .button a {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            color: $base-white-color;
+            font-size: $button-cart-font-size
+        }
+
+        .button#add-to-cart-btn a:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button#add-to-cart-btn:hover a {
+            padding-right: 25px;
+        }
+
+        .button#add-to-cart-btn:hover a:after {
+            opacity: 1;
+            right: 0;
+        }
+
     }
 
     .feature.left {
+
         grid-template-areas:
             "left right";
 
@@ -232,9 +294,29 @@ section.hero {
 
         .content {
             text-align: left;
-            width: 25em;
             justify-self: left;
         }
+
+
+        .button a:before {
+            content: '\00ab';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: -20px;
+            transition: 0.5s;
+        }
+
+
+        .button:hover a {
+            padding-left: 25px;
+        }
+
+        .button:hover a:before {
+            opacity: 1;
+            left: 0;
+        }
+        
     }
 
 }
@@ -284,28 +366,23 @@ section.hero {
 
 
 .display-section {
+
     .display-button {
         display: grid;
-        grid-template-columns: repeat(1, auto);
-        margin-bottom: 8em;
+        // grid-template-columns: repeat(1, auto);
+        margin-bottom: 4em;
 
         a {
-            text-decoration: none;
             padding: 12px 40px;
-            border-radius: 3 ̰0px;
-            background: #006491;
-            display: inline-block;
-            color: #fff;
+            border-radius: 30px;
+            background: $base-color;
+            color: $base-white-color;
             font-weight: 700;
             margin-top: 35px;
             transition: all 0.5s ease-in-out;
-            box-shadow: 5px 8px 10px rgb(0 0 0 / 10%);
-            justify-content: center;
-            align-items: center;
         }
 
         a:hover {
-            background-color: #0f76a6;
             transform: scale(1.1);
         }
 
@@ -847,7 +924,8 @@ ul {
 }
 
 .footer {
-    background-color: #848484;;
+    background-color: #848484;
+    ;
     padding: 70px 0;
 }
 
@@ -1159,7 +1237,7 @@ ul {
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
 
-        div{
+        div {
             cursor: pointer;
         }
 
@@ -1256,7 +1334,7 @@ ul {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(to bottom, #74ABE2, #5563DE);
+        // background: linear-gradient(to bottom, #74ABE2, #5563DE);
         font-family: 'Ropa Sans', sans-serif;
     }
 

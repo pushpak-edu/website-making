@@ -1,6 +1,13 @@
 @charset "UTF-8";
 * {
   box-sizing: border-box;
+  --base-font: inherit;
+  --small-font: 0.75rem;
+  --normal-font: 1rem;
+  --medium-font: 1.25rem;
+  --primary-color-copoun: #FA003F;
+  --secondary-color: #fff;
+  --base-padding: 0.5rem;
 }
 
 body {
@@ -493,12 +500,11 @@ section.hero .down-arrow path {
 .orders .summary {
   padding: 20px;
   background: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px #006491;
   border-radius: 5px;
   margin-bottom: 80px;
 }
 .orders .summary .meta-data {
-  border-right: 1px solid #eee;
   padding-right: 10%;
 }
 .orders .summary .total {
@@ -531,7 +537,7 @@ section.hero .down-arrow path {
 .orders .delivery-payment {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .orders .delivery-address,
 .orders .payment-details {
@@ -572,6 +578,7 @@ section.hero .down-arrow path {
 }
 .orders .coupon-input {
   float: right;
+  border-color: #006491;
 }
 .orders .header {
   display: flex;
@@ -661,14 +668,6 @@ section.hero .down-arrow path {
     width: 100%;
     margin-bottom: 20px;
   }
-  .orders .grid_12.summary {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 99999;
-    width: 100%;
-    margin-bottom: 0;
-  }
   .orders .container {
     margin-bottom: 230px;
     margin-top: 120px;
@@ -712,10 +711,12 @@ section.hero .down-arrow path {
 }
 
 .new .show-row {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 3em;
+  display: flex;
   margin-bottom: 8em;
+  margin-bottom: 5px;
+}
+.new .show-row .show {
+  width: 25%;
 }
 .new .ref {
   width: 15em;
@@ -820,182 +821,84 @@ ul {
   grid-template-columns: repeat(3, auto);
 }
 
-.coupon-demo {
+.coupon-apply {
+  margin-bottom: 10px;
   /* Helpers */
   /* Removes the announcement on Print */
 }
-.coupon-demo body {
-  font-family: sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-.coupon-demo .is-hidden {
+.coupon-apply .is-hidden {
   display: none !important;
 }
-.coupon-demo .is-desktop {
-  display: block;
-}
-@media (max-width: 768px) {
-  .coupon-demo .is-desktop {
-    display: none !important;
-  }
-}
-.coupon-demo .is-mobile {
-  display: none !important;
-}
-@media (max-width: 768px) {
-  .coupon-demo .is-mobile {
-    display: block !important;
-  }
-}
-.coupon-demo .announcement {
-  --base-font: inherit;
-  --small-font: 0.75rem;
-  --normal-font: 1rem;
-  --medium-font: 1.25rem;
-  --primary-color: #FA003F;
-  --secondary-color: #fff;
-  --base-padding: 0.5rem;
+.coupon-apply .announcement {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--primary-color);
-  font-family: var(--base-font-dev), sans-serif;
+  background: var(--primary-color-copoun);
   padding: var(--base-padding);
 }
-@media (max-width: 768px) {
-  .coupon-demo .announcement {
-    flex-direction: column-reverse;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 4;
-  }
+.coupon-apply .tooltip {
+  color: var(--primary-color-copoun);
+  margin: 5px;
+  cursor: pointer;
 }
 @media print {
-  .coupon-demo .announcement {
+  .coupon-apply .announcement {
     display: none;
   }
 }
-.coupon-demo .announcement .text {
+.coupon-apply .announcement .text {
   padding: 0 1rem;
   color: var(--secondary-color);
 }
 @media (max-width: 768px) {
-  .coupon-demo .announcement .text {
+  .coupon-apply .announcement .text {
     padding-bottom: var(--base-padding);
   }
 }
-.coupon-demo .announcement input,
-.coupon-demo .announcement button {
+.coupon-apply .announcement input,
+.coupon-apply .announcement button {
   font-family: var(--base-font);
   font-size: var(--small-font);
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: var(--base-padding);
   border: 2px dashed var(--secondary-color);
-  /* height: 36px; */
 }
-.coupon-demo .announcement input {
-  background: var(--primary-color);
+.coupon-apply .announcement input {
+  background: var(--primary-color-copoun);
   color: var(--secondary-color);
   text-align: center;
   border-right: 0;
   font-size: 16px;
 }
-.coupon-demo .announcement button {
+.coupon-apply .announcement button {
   background: var(--secondary-color);
-  color: var(--primary-color);
+  color: var(--primary-color-copoun);
   cursor: pointer;
   box-shadow: none;
   border-radius: 0;
   font-size: 1rem;
 }
-.coupon-demo .announcement #timer {
-  /* font-weight: bold; */
-  background: var(--secondary-color);
-  color: var(--primary-color);
-  padding: var(--base-padding);
-  margin-left: 1rem;
-  width: 150px;
-  text-align: center;
-  border: 1px dashed var(--secondary-color);
-  margin-right: 2.5rem;
-  line-height: 1.3;
-}
-.coupon-demo .announcement .coupon {
+.coupon-apply .announcement .coupon {
   display: flex;
   align-items: center;
+  margin: 0px;
 }
 @media (max-width: 768px) {
-  .coupon-demo .announcement .coupon {
+  .coupon-apply .announcement .coupon {
     margin: 1rem auto;
   }
 }
 @media (min-width: 769px) {
-  .coupon-demo .announcement .close {
+  .coupon-apply .announcement .close {
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50%;
     left: inherit;
     right: 0.5rem;
     background: var(--secondary-color);
-    color: var(--primary-color);
-  }
-}
-.coupon-demo .announcement .tooltip {
-  position: relative;
-  display: inline-block;
-  color: var(--secondary-color);
-  opacity: 1;
-  line-height: inherit;
-  font-size: inherit;
-  z-index: inherit;
-}
-.coupon-demo .announcement .tooltip .tooltiptext {
-  visibility: hidden;
-  position: absolute;
-  bottom: 130%;
-  left: 50%;
-  background-color: #555;
-  color: #fff;
-  width: 170px;
-  font-size: smaller;
-  /* font-weight: bold; */
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 1;
-}
-.coupon-demo .announcement .tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  bottom: -100%;
-}
-.coupon-demo .announcement .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-  top: -35%;
-  transform: rotate(180deg);
-}
-@media (max-width: 768px) {
-  .coupon-demo .announcement .tooltip:hover .tooltiptext {
-    bottom: 150%;
-  }
-  .coupon-demo .announcement .tooltip .tooltiptext::after {
-    top: 100%;
-    transform: rotate(0deg);
+    color: var(--primary-color-copoun);
   }
 }
 
@@ -1104,4 +1007,110 @@ ul {
 .img-combo {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.track .timeline {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #eee;
+}
+.track .timeline__header {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.track .timeline__header:before {
+  content: "";
+  width: 0.125rem;
+  height: 100%;
+  position: absolute;
+  top: 0.25rem;
+  left: calc(0.375rem - 1px);
+  background-color: #006491;
+}
+.track .timeline__live {
+  display: flex;
+  margin-bottom: 0.25rem;
+}
+.track .timeline__live > span {
+  display: block;
+  margin-left: 0.25rem;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.track .timeline__title {
+  margin-left: 1rem;
+}
+.track .timeline__list {
+  padding-left: 0px;
+  margin-top: 0px;
+}
+.track .timeline__list > li {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+  padding: 0.625rem 0;
+  font-size: 0.75rem;
+}
+.track .timeline__list > li:before {
+  content: "";
+  width: 0.125rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(0.375rem - 1px);
+  background-color: #006491;
+}
+.track .timeline__list > li:last-child:before {
+  height: 0.875rem;
+}
+.track .timeline__marker {
+  width: 0.5rem;
+  min-width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.0625rem;
+  margin-left: 0.125rem;
+  background-color: var(--timeline-colour);
+  border-radius: 50%;
+}
+.track .timeline__marker--live {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.track .timeline__timestamp {
+  font-weight: 700;
+}
+.track .timeline--alt {
+  --timeline-colour: #2866f6;
+}
+@-webkit-keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(0.85, 0.85, 0.85);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(0.85, 0.85, 0.85);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }/*# sourceMappingURL=main.css.map */

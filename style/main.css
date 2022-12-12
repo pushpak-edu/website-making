@@ -123,7 +123,7 @@ section.hero .down-arrow path {
   transform: translateX(0%);
 }
 
-@media only screen and (max-width: 680px) {
+@media (max-width: 768px) {
   .logo {
     color: #006491;
   }
@@ -139,6 +139,36 @@ section.hero .down-arrow path {
   }
   .back-image {
     height: 110vh;
+  }
+  .button {
+    border-radius: 4px;
+    background-color: #006491;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px;
+    height: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 15px 0 15px 0;
+    width: 100%;
+  }
+  .button a {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 0.9em;
+  }
+  .new .show-row {
+    flex-direction: column;
+  }
+  .new .show-row .show {
+    width: 100% !important;
+  }
+  .show {
+    display: flex;
   }
 }
 @media only screen and (min-width: 680px) {
@@ -687,7 +717,7 @@ section.hero .down-arrow path {
     margin-bottom: 20px;
   }
   .orders .container {
-    margin-bottom: 230px;
+    margin-bottom: 80px;
     margin-top: 120px;
   }
   .orders .sub-total,
@@ -868,6 +898,7 @@ ul {
 .coupon-apply .announcement .text {
   padding: 0 1rem;
   color: var(--secondary-color);
+  font-size: 10px;
 }
 @media (max-width: 768px) {
   .coupon-apply .announcement .text {

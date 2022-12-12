@@ -161,7 +161,7 @@ section.hero {
     transform: translateX(0%);
 }
 
-@media only screen and (max-width: 680px) {
+@media (max-width: 768px) {
 
     .logo{
 
@@ -187,6 +187,43 @@ section.hero {
     .back-image {
         height: 110vh;
     }
+
+    .button {
+        border-radius: 4px;
+        background-color: $base-color;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 5px;
+        height: 30px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 15px 0 15px 0;
+        width: 100%;
+    }
+
+    .button a {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        color: $base-white-color;
+        font-size: $button-cart-font-size;
+        
+    }
+
+    .new .show-row {
+        flex-direction: column;
+    }
+
+    .new .show-row .show {
+        width: 100% !important;
+    }
+
+    .show {
+        display: flex;
+    }
+    
 
 }
 
@@ -856,7 +893,7 @@ section.hero {
         }
 
         .container {
-            margin-bottom: 230px;
+            margin-bottom: 80px;
             margin-top: 120px;
         }
 
@@ -1084,6 +1121,7 @@ ul {
     .announcement .text {
         padding: 0 1rem;
         color: var(--secondary-color);
+        font-size: 10px;
     }
 
     @media (max-width: 768px) {

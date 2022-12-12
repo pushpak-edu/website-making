@@ -123,6 +123,24 @@ section.hero .down-arrow path {
   transform: translateX(0%);
 }
 
+@media only screen and (max-width: 680px) {
+  .logo {
+    color: #006491;
+  }
+  .logo span {
+    color: black;
+  }
+  section.hero svg.down-arrow {
+    stroke: #006491;
+    position: unset;
+  }
+  section.hero svg.down-arrow path {
+    fill: #006491;
+  }
+  .back-image {
+    height: 110vh;
+  }
+}
 @media only screen and (min-width: 680px) {
   body {
     margin: 1.5em 5em;

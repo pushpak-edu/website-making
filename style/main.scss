@@ -7,7 +7,7 @@ $base-color: #006491;
 $base-font-family: 'Poppins', sans-serif;
 $base-margin: 1.5em;
 $base-white-color: #fff;
-
+$base-black-color: black;
 
 
 // Standard Font Size
@@ -161,6 +161,35 @@ section.hero {
     transform: translateX(0%);
 }
 
+@media only screen and (max-width: 680px) {
+
+    .logo{
+
+        color: $base-color;
+
+        span {
+            color: $base-black-color;
+        }
+
+    }
+
+    section.hero svg.down-arrow {
+        
+        stroke: $base-color;
+        position: unset;
+
+        path {
+            fill: $base-color;
+        }
+
+    }
+    
+    .back-image {
+        height: 110vh;
+    }
+
+}
+
 @media only screen and (min-width: 680px) {
 
     body {
@@ -232,12 +261,10 @@ section.hero {
 
         svg.down-arrow {
             stroke: $base-color;
-            ;
             position: unset;
 
             path {
                 fill: $base-color;
-                ;
             }
         }
     }

@@ -1,5 +1,8 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 1.5em;
   font-family: "Poppins", sans-serif;
@@ -77,7 +80,7 @@ h1 {
 }
 
 section.hero {
-  color: 6491;
+  color: #006491;
   height: 90vh;
   -webkit-animation: moveDown 1s ease-in-out forwards;
           animation: moveDown 1s ease-in-out forwards;
@@ -139,7 +142,7 @@ section.hero .down-arrow path {
     margin: 0;
   }
   nav ul a {
-    color: 6491;
+    color: #006491;
     padding: 0.5em 1.5em;
     font-size: 0.9rem;
   }
@@ -250,15 +253,6 @@ section.hero .down-arrow path {
     left: 0;
   }
 }
-@media only screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  .feature {
-    gap: 0;
-  }
-}
 @-webkit-keyframes load {
   from {
     -webkit-clip-path: polygon(0 74%, 100% 72%, 100% 100%, 0% 100%);
@@ -334,30 +328,30 @@ section.hero .down-arrow path {
   vertical-align: middle;
 }
 
-.demo img {
+.orders img {
   width: 100%;
   height: auto;
   vertical-align: sub;
 }
-.demo .left {
+.orders .left {
   float: left;
 }
-.demo .right {
+.orders .right {
   float: right;
 }
-.demo .clr {
+.orders .clr {
   clr: both;
 }
-.demo .align-left {
+.orders .align-left {
   text-align: left;
 }
-.demo .align-right {
+.orders .align-right {
   text-align: right;
 }
-.demo .align-center {
+.orders .align-center {
   text-align: center;
 }
-.demo .icon {
+.orders .icon {
   background: url(https://s.cdpn.io/6035/glyphicons-halflings-white.png) no-repeat;
   display: inline-block;
   display: inline-block;
@@ -368,51 +362,51 @@ section.hero .down-arrow path {
   vertical-align: text-top;
   background-position: 14px 14px;
 }
-.demo .icon-plus {
+.orders .icon-plus {
   background-position: -408px -96px;
 }
-.demo .icon-minus {
+.orders .icon-minus {
   background-position: -433px -96px;
 }
-.demo .icon-remove {
+.orders .icon-remove {
   background-position: -312px 0;
 }
-.demo .btn-quantity {
+.orders .btn-quantity {
   transition: background-color 0.3s ease;
   font-size: 0.8em;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 10px 15px;
 }
-.demo .btn-quantity.plus {
-  color: #478298;
+.orders .btn-quantity.plus {
+  color: #006491;
 }
-.demo .btn-quantity.plus:hover {
+.orders .btn-quantity.plus:hover {
   color: #b5132c;
 }
-.demo .btn-quantity.minus {
+.orders .btn-quantity.minus {
   color: #478298;
 }
-.demo .btn-quantity.minus:hover {
+.orders .btn-quantity.minus:hover {
   color: #b5132c;
 }
-.demo .btn-remove {
+.orders .btn-remove {
   position: absolute;
   bottom: 20px;
   right: 20px;
   z-index: 10;
   text-align: center;
   display: inline-block;
-  color: #e94343;
-  font-size: 1.4em;
+  color: #006491;
+  font-size: 0.9em;
 }
-.demo .btn-remove:hover {
+.orders .btn-remove:hover {
   color: #060606;
 }
-.demo .btn-remove .icon {
+.orders .btn-remove .icon {
   margin-top: 2px;
 }
-.demo .btn-checkout {
+.orders .btn-checkout {
   color: #fff;
   text-decoration: none;
   margin: 20px 0 0;
@@ -427,15 +421,15 @@ section.hero .down-arrow path {
   width: 40%;
   font-size: 2em;
 }
-.demo .btn-checkout:hover {
+.orders .btn-checkout:hover {
   background: #b5132c;
 }
-.demo .items {
+.orders .items {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.demo .item {
+.orders .item {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -443,34 +437,34 @@ section.hero .down-arrow path {
   position: relative;
   display: flex;
 }
-.demo .item .inner_container {
+.orders .item .inner_container {
   width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.demo .item img {
+.orders .item img {
   border-radius: 10px 0 0 10px;
 }
-.demo .item .preview {
+.orders .item .preview {
   width: 20%;
 }
-.demo .item .preview ul {
+.orders .item .preview ul {
   margin: 0;
   padding: 0;
   list-style: none;
   position: relative;
   height: 100%;
 }
-.demo .item .preview li {
+.orders .item .preview li {
   position: absolute;
   top: 0;
   opacity: 0;
 }
-.demo .item .preview li.active {
+.orders .item .preview li.active {
   opacity: 1;
 }
-.demo .item .details {
+.orders .item .details {
   padding: 0px 30px;
   position: relative;
   overflow: hidden;
@@ -479,16 +473,15 @@ section.hero .down-arrow path {
   flex-direction: column;
   justify-content: space-evenly;
 }
-.demo .item .details h3 {
+.orders .item .details h3 {
   margin: 0;
-  position: relative;
   z-index: 1;
   font-size: 1.25rem;
 }
-.demo .item .details p {
+.orders .item .details p {
   font-size: 1em;
 }
-.demo .item .details input[type=number] {
+.orders .item .details input[type=number] {
   width: 50px;
   height: 30px;
   padding: 2px;
@@ -497,51 +490,51 @@ section.hero .down-arrow path {
   border: none;
   border: 1px solid #ccc;
 }
-.demo .summary {
+.orders .summary {
   padding: 20px;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin-bottom: 80px;
 }
-.demo .summary .meta-data {
+.orders .summary .meta-data {
   border-right: 1px solid #eee;
   padding-right: 10%;
 }
-.demo .summary .total {
+.orders .summary .total {
   font-size: 1.25em;
   text-align: center;
   line-height: 65px;
 }
-.demo .picker {
+.orders .picker {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
 }
-.demo .quantity-text {
+.orders .quantity-text {
   margin: 0 20px;
 }
-.demo .sub-total,
-.demo .taxes {
+.orders .sub-total,
+.orders .taxes {
   font-size: 1.5em;
   margin: 10px 0;
 }
-.demo .btn-summary {
+.orders .btn-summary {
   display: flex;
   justify-content: space-around;
 }
-.demo .btn-reverse {
+.orders .btn-reverse {
   background-color: #fff;
-  color: #478298;
-  border: 1px solid #478298;
+  color: #006491;
+  border: 1px solid #006491;
 }
-.demo .delivery-payment {
+.orders .delivery-payment {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
 }
-.demo .delivery-address,
-.demo .payment-details {
+.orders .delivery-address,
+.orders .payment-details {
   width: 49%;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1882352941);
@@ -549,15 +542,15 @@ section.hero .down-arrow path {
   padding: 15px 30px 30px 30px;
   margin-bottom: 20px;
 }
-.demo .delivery-address p,
-.demo .payment-details p {
+.orders .delivery-address p,
+.orders .payment-details p {
   font-size: 0.8rem;
   padding-top: 15px;
 }
-.demo h3 {
+.orders h3 {
   font-size: 1.25rem;
 }
-.demo .coupon {
+.orders .coupon {
   display: flex;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1882352941);
@@ -566,21 +559,21 @@ section.hero .down-arrow path {
   align-items: center;
   margin-bottom: 20px;
 }
-.demo .coupon .apply-coupon {
+.orders .coupon .apply-coupon {
   width: 49%;
 }
-.demo .coupon h3 {
+.orders .coupon h3 {
   margin-right: 30px;
   font-size: 1.25rem;
 }
-.demo input {
+.orders input {
   border-radius: 10px;
   height: 40px;
 }
-.demo .coupon-input {
+.orders .coupon-input {
   float: right;
 }
-.demo .header {
+.orders .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -593,82 +586,82 @@ section.hero .down-arrow path {
   margin-top: -200px;
   z-index: 99999;
 }
-.demo .login a {
+.orders .login a {
   text-decoration: none;
   color: #575756;
 }
-.demo .logo {
+.orders .logo {
   padding: 0 20px;
 }
-.demo h1 {
+.orders h1 {
   font-size: 4em;
 }
-.demo .summary-content {
+.orders .summary-content {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
 }
 @media only screen and (max-width: 900px) {
-  .demo h1 {
+  .orders h1 {
     font-size: 3em;
   }
-  .demo .item .details h3 {
+  .orders .item .details h3 {
     font-size: 1.6em;
   }
-  .demo .quantity-text {
+  .orders .quantity-text {
     font-size: 1em;
   }
-  .demo .btn-remove {
+  .orders .btn-remove {
     right: 15px;
-    font-size: 1.4em;
+    font-size: 0.9em;
   }
-  .demo .item .details p {
+  .orders .item .details p {
     font-size: 0.8em;
   }
-  .demo .picker {
+  .orders .picker {
     margin-right: 10px;
   }
-  .demo .btn-quantity {
+  .orders .btn-quantity {
     font-size: 0.6em;
   }
 }
 @media only screen and (max-width: 768px) {
-  .demo .item {
+  .orders .item {
     flex-direction: column;
     margin: auto;
     margin-bottom: 30px;
   }
-  .demo .item .preview {
+  .orders .item .preview {
     width: 100%;
   }
-  .demo .item .details {
+  .orders .item .details {
     padding: 15px 30px;
     width: 100%;
   }
-  .demo .item img {
+  .orders .item img {
     border-radius: 10px 10px 0 0;
   }
-  .demo .item .details h3 {
+  .orders .item .details h3 {
     font-size: 2.6em;
     text-align: center;
   }
-  .demo h1 {
+  .orders h1 {
     font-size: 4em;
   }
-  .demo .header {
+  .orders .header {
     margin-bottom: 50px;
     height: 80px;
     margin-top: -120px;
   }
-  .demo .item .details p {
+  .orders .item .details p {
     font-size: 1em;
     text-align: center;
   }
-  .demo .item .inner_container {
+  .orders .item .inner_container {
     width: 100%;
     margin-bottom: 20px;
   }
-  .demo .grid_12.summary {
+  .orders .grid_12.summary {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -676,45 +669,45 @@ section.hero .down-arrow path {
     width: 100%;
     margin-bottom: 0;
   }
-  .demo .container {
+  .orders .container {
     margin-bottom: 230px;
     margin-top: 120px;
   }
-  .demo .sub-total,
-.demo .taxes {
+  .orders .sub-total,
+.orders .taxes {
     font-size: 0.6em;
   }
-  .demo .summary .total {
+  .orders .summary .total {
     font-size: 1.6em;
     line-height: 1em;
     margin: 10px 0;
   }
-  .demo .delivery-payment {
+  .orders .delivery-payment {
     margin-top: 60px;
   }
-  .demo .coupon {
+  .orders .coupon {
     flex-direction: column;
     padding: 30px 0px;
   }
-  .demo .coupon h3 {
+  .orders .coupon h3 {
     margin: 0;
   }
-  .demo .btn-checkout {
+  .orders .btn-checkout {
     font-size: 1em;
   }
-  .demo .logo {
+  .orders .logo {
     width: 50%;
   }
 }
 @media only screen and (max-width: 480px) {
-  .demo .btn-checkout {
+  .orders .btn-checkout {
     font-size: 1.2em;
   }
-  .demo .container {
+  .orders .container {
     padding: 0 30px;
   }
-  .demo .btn-remove {
-    font-size: 1.2em;
+  .orders .btn-remove {
+    font-size: 0.9em;
   }
 }
 
@@ -731,22 +724,6 @@ section.hero .down-arrow path {
 }
 .new .check {
   width: 100%;
-}
-
-body {
-  line-height: 1.5;
-  font-family: "Poppins", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  max-width: 1170px;
-  margin: auto;
 }
 
 .row {
@@ -1122,4 +1099,9 @@ ul {
   align-items: center;
   justify-content: center;
   font-family: "Ropa Sans", sans-serif;
+}
+
+.img-combo {
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */

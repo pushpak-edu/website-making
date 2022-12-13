@@ -52,12 +52,12 @@ a {
     left: 0;
     background: url('../assets/images/background-pizza-img.jpg');
     background-size: cover;
-    background-position-x: 20%;
-    background-position-y: 20%;
-    width: 100%;
-    height: 100vh;
+    // background-position-x: 20%;
+    // background-position-y: 20%;
+    // width: 100%;
+    // height: 100vh;
     z-index: -1;
-    animation: load 2s forwards;
+    animation: load 12s forwards;
 }
 
 .logo {
@@ -129,6 +129,7 @@ section.hero {
     .down-arrow {
         stroke: white;
         position: absolute;
+
         bottom: 8em;
         width: 1em;
         animation: moveArrow 1s infinite;

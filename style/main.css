@@ -414,26 +414,6 @@ section.hero .down-arrow path {
 .orders .align-center {
   text-align: center;
 }
-.orders .icon {
-  background: url(https://s.cdpn.io/6035/glyphicons-halflings-white.png) no-repeat;
-  display: inline-block;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin-top: 1px;
-  line-height: 14px;
-  vertical-align: text-top;
-  background-position: 14px 14px;
-}
-.orders .icon-plus {
-  background-position: -408px -96px;
-}
-.orders .icon-minus {
-  background-position: -433px -96px;
-}
-.orders .icon-remove {
-  background-position: -312px 0;
-}
 .orders .btn-quantity {
   transition: background-color 0.3s ease;
   font-size: 0.8em;

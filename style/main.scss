@@ -223,6 +223,17 @@ section.hero {
     .show {
         display: flex;
     }
+
+
+    .delivery-payment {
+       flex-direction: column;
+       margin-top: 30px !important;
+    }
+
+    .delivery-address,
+    .payment-details {
+        width: 100% !important;
+    }
     
 
 }

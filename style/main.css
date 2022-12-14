@@ -8,6 +8,7 @@
   --primary-color-copoun: #FA003F;
   --secondary-color: #fff;
   --base-padding: 0.5rem;
+  --blink-color: #2866f6;
 }
 
 body {
@@ -162,6 +163,7 @@ section.hero .down-arrow path {
   }
   .new .show-row .show {
     width: 100% !important;
+    align-items: center;
   }
   .show {
     display: flex;
@@ -1123,14 +1125,14 @@ ul {
   font-weight: 700;
 }
 .track .timeline--alt {
-  --timeline-colour: #2866f6;
+  --timeline-colour: var(--blink-color);
 }
 @-webkit-keyframes pulse {
   from {
     transform: scale3d(1, 1, 1);
   }
   50% {
-    transform: scale3d(0.85, 0.85, 0.85);
+    transform: scale3d(0.5, 0.5, 0.5);
   }
   to {
     transform: scale3d(1, 1, 1);
@@ -1141,7 +1143,7 @@ ul {
     transform: scale3d(1, 1, 1);
   }
   50% {
-    transform: scale3d(0.85, 0.85, 0.85);
+    transform: scale3d(0.5, 0.5, 0.5);
   }
   to {
     transform: scale3d(1, 1, 1);

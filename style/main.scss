@@ -10,6 +10,7 @@ $base-white-color: #fff;
 $base-black-color: black;
 
 
+
 // Standard Font Size
 $standard-font-size: 1.3em;
 
@@ -31,6 +32,7 @@ $button-cart-font-size: 0.9em;
     --primary-color-copoun: #FA003F;
     --secondary-color: #fff;
     --base-padding: 0.5rem;
+    --blink-color :  #2866f6;
 
 }
 
@@ -219,6 +221,7 @@ section.hero {
 
     .new .show-row .show {
         width: 100% !important;
+        align-items: center;
     }
 
     .show {
@@ -974,7 +977,6 @@ ul {
 
 .footer {
     background-color: #848484;
-    ;
     padding: 70px 0;
 }
 
@@ -1391,7 +1393,7 @@ ul {
         }
 
         &--alt {
-            --timeline-colour: #2866f6;
+            --timeline-colour: var(--blink-color);
         }
     }
 
@@ -1401,7 +1403,7 @@ ul {
         }
 
         50% {
-            transform: scale3d(.85, .85, .85);
+            transform: scale3d(.50, .50, .50);
         }
 
         to {

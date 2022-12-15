@@ -67,7 +67,6 @@ a {
 }
 
 nav {
-    position: fixed;
     right: 0;
     top: 0;
     background: white;
@@ -104,12 +103,6 @@ nav {
 header {
     display: flex;
     justify-content: space-between;
-
-    // svg {
-    //     width: 2.3em;
-    //     margin-top: -.6em;
-    //     cursor: pointer;
-    // }
 }
 
 h1 {
@@ -264,10 +257,6 @@ section.hero {
         width: auto;
         height: auto;
         background: none;
-
-        svg.close {
-            display: none;
-        }
 
         ul {
             display: flex;

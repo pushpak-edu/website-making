@@ -38,7 +38,6 @@ a {
 }
 
 nav {
-  position: fixed;
   right: 0;
   top: 0;
   background: white;
@@ -194,9 +193,6 @@ section.hero .down-arrow path {
     width: auto;
     height: auto;
     background: none;
-  }
-  nav svg.close {
-    display: none;
   }
   nav ul {
     display: flex;

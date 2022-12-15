@@ -1,12 +1,12 @@
 
 # Website
 
-Fit-Missisuage
+Pizza-Missisuage
 
 
 ## Demo - Video
 
-https://www.loom.com/share/22def61428f54dc5a488795c2d9e5357
+https://www.loom.com/share/82b10647a3ae42d89ca60126f1856049
 
 
 # Author - Pushpak 👋
@@ -14,15 +14,28 @@ https://www.loom.com/share/22def61428f54dc5a488795c2d9e5357
 
 ## Screeshot Mobile Version
 
-![Screenshot](./readme-image/Screenshot%202022-10-03%20at%2011.12.35%20PM.png)
-![Screenshot](./readme-image/Screenshot%202022-10-03%20at%2011.12.42%20PM.png)
-![Screenshot](./readme-image/Screenshot%202022-10-03%20at%2011.12.48%20PM.png)
+
+![Screenshot](./readme-image/mobile/Screenshot%202022-12-15%20at%2011.57.16%20AM.png)
+![Screenshot](./readme-image/mobile/Screenshot%202022-12-15%20at%2011.57.19%20AM.png)
+![Screenshot](./readme-image/mobile/Screenshot%202022-12-15%20at%2011.57.24%20AM.png)
+
+![Screenshot](./readme-image/mobile/Screenshot%202022-12-15%20at%2011.57.32%20AM.png)
+![Screenshot](./readme-image/mobile/Screenshot%202022-12-15%20at%2011.57.37%20AM.png)
+![Screenshot](./readme-image/mobile/Screenshot%202022-12-15%20at%2011.57.40%20AM.png)
+![Screenshot](./readme-image/mobile/Screenshot%202022-12-15%20at%2011.57.42%20AM.png)
+
 
 
 ## Screeshot Desktop Version
 
-![Screenshot](./readme-image/Screenshot%202022-10-03%20at%2011.16.52%20PM.png)
-![Screenshot](./readme-image/Screenshot%202022-10-03%20at%2011.17.00%20PM.png)
+![Screenshot](./readme-image/desktop/Screenshot%202022-12-15%20at%2011.49.38%20AM.png)
+![Screenshot](./readme-image/desktop/Screenshot%202022-12-15%20at%2011.49.46%20AM.png)
+![Screenshot](./readme-image/desktop/Screenshot%202022-12-15%20at%2011.49.52%20AM.png)
+![Screenshot](./readme-image/desktop/Screenshot%202022-12-15%20at%2011.49.55%20AM.png)
+![Screenshot](./readme-image/desktop/Screenshot%202022-12-15%20at%2011.49.59%20AM.png)
+![Screenshot](./readme-image/desktop/Screenshot%202022-12-15%20at%2011.50.04%20AM.png)
+![Screenshot](./readme-image/desktop/Screenshot%202022-12-15%20at%2011.50.06%20AM.png)
+
 
 
 ## Technology
